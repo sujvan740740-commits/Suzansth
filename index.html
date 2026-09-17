@@ -1,37 +1,44 @@
-<! html>
+<!DOCTYPE html>
 <html lang="ne">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Newroad Khaja Ghar | Bhimad, Tanahun</title>
+<meta name="description" content="Newroad Khaja Ghar, Bhimad Tanahun — Momo, Chowmein, Khana Set, Khaja Set, Sukuti, Roti and more.">
+<meta name="theme-color" content="#f59e0b">
 
-<meta name="description"
-content="Newroad Khaja Ghar, Bhimad Tanahun — Momo, Chowmein, Khana Set, Khaja Set, Sukuti, Roti, Anda Tarkari, Tea, Coffee and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
-html{
-  scroll-behavior:smooth;
+:root{
+  --orange:#f97316;
+  --gold:#f59e0b;
+  --yellow:#fbbf24;
+  --cream:#fffaf0;
+  --cream2:#fff3d6;
+  --white:#ffffff;
+  --text:#2b2118;
+  --muted:#6b5b4b;
+  --brown:#7c3f14;
+  --shadow:0 12px 30px rgba(93,55,18,.13);
 }
 
 body{
   font-family:'Poppins','Noto Sans Devanagari',sans-serif;
-  background:#080808;
-  color:#fff;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top left,#fff1cf 0,#fffaf0 30%,#fff 70%);
   line-height:1.6;
-}
-
-img{
-  max-width:100%;
-  display:block;
 }
 
 a{
@@ -39,180 +46,139 @@ a{
   color:inherit;
 }
 
-/* ================= HEADER ================= */
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(5,5,5,.92);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,193,7,.15);
+img{
+  max-width:100%;
+  display:block;
 }
 
-.nav{
-  max-width:1250px;
+.container{
+  width:min(1180px,92%);
   margin:auto;
-  padding:12px 20px;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(249,115,22,.12);
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.nav-inner{
+  height:72px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:20px;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.brand-icon{
-  width:48px;
-  height:48px;
-  border-radius:14px;
-  background:linear-gradient(145deg,#ffc107,#e65100);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  box-shadow:0 8px 25px rgba(255,152,0,.25);
-}
-
-.brand-text{
-  line-height:1.05;
-}
-
-.brand-text strong{
-  display:block;
+.logo{
+  font-weight:800;
   font-size:19px;
+  color:var(--brown);
 }
 
-.brand-text span{
-  color:#ffc107;
+.logo span{
+  color:var(--orange);
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
   font-size:14px;
+  font-weight:600;
 }
 
-.navlinks{
-  display:flex;
-  gap:22px;
-  align-items:center;
+.nav-links a:hover{
+  color:var(--orange);
 }
 
-.navlinks a{
-  color:#ddd;
-  font-size:13px;
-  transition:.25s;
-}
-
-.navlinks a:hover{
-  color:#ffc107;
-}
-
-.nav-actions{
-  display:flex;
-  gap:8px;
-}
-
-.phone-btn,
-.wa-btn{
-  padding:10px 15px;
-  border-radius:12px;
-  font-size:12px;
+.nav-btn{
+  background:linear-gradient(135deg,var(--orange),var(--gold));
+  color:white;
+  padding:10px 17px;
+  border-radius:30px;
   font-weight:700;
+  box-shadow:0 7px 18px rgba(249,115,22,.25);
 }
 
-.phone-btn{
-  background:#d62828;
-}
-
-.wa-btn{
-  background:#168a45;
-}
-
-@media(max-width:900px){
-  .navlinks{
-    display:none;
-  }
-}
-
-/* ================= HERO ================= */
-
+/* HERO */
 .hero{
-  min-height:760px;
+  min-height:720px;
+  padding:125px 0 70px;
+  display:flex;
+  align-items:center;
   position:relative;
   overflow:hidden;
-  display:flex;
-  align-items:center;
   background:
-    linear-gradient(90deg,
-      rgba(0,0,0,.96) 0%,
-      rgba(0,0,0,.82) 40%,
-      rgba(0,0,0,.45) 72%,
-      rgba(0,0,0,.8) 100%
-    ),
-    url("images/shop.jpg") center/cover;
+    radial-gradient(circle at 80% 20%,#ffd978 0,transparent 25%),
+    linear-gradient(135deg,#fffaf0,#fff1d2);
 }
 
 .hero::before{
   content:"";
   position:absolute;
-  width:450px;
-  height:450px;
-  background:#ff9800;
-  filter:blur(150px);
-  opacity:.18;
-  left:-150px;
-  top:-100px;
+  width:400px;
+  height:400px;
+  border-radius:50%;
+  background:rgba(249,115,22,.08);
+  right:-150px;
+  bottom:-120px;
 }
 
-.hero-content{
-  width:min(1250px,92%);
-  margin:auto;
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
   position:relative;
-  z-index:2;
+  z-index:1;
 }
 
-.location-tag{
-  color:#ffc107;
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 15px;
+  border-radius:30px;
+  background:white;
+  color:var(--orange);
+  font-size:13px;
   font-weight:700;
-  font-size:15px;
-  margin-bottom:15px;
+  box-shadow:var(--shadow);
+  margin-bottom:18px;
 }
 
 .hero h1{
-  font-size:clamp(50px,8vw,92px);
-  line-height:.95;
-  letter-spacing:-3px;
-  max-width:720px;
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.05;
+  font-weight:800;
+  color:var(--brown);
+  text-shadow:3px 4px 0 #ffd98a;
+  margin-bottom:18px;
 }
 
 .hero h1 span{
-  color:#ffc107;
-  text-shadow:0 8px 35px rgba(255,193,7,.2);
+  color:var(--orange);
+  display:block;
 }
 
-.hero-sub{
-  max-width:620px;
-  margin:25px 0;
-  color:#ddd;
-  font-size:19px;
+.hero p{
+  color:var(--muted);
+  max-width:560px;
+  font-size:17px;
+  margin-bottom:28px;
 }
 
-.paint{
-  display:inline-block;
-  margin:5px 0 25px;
-  padding:10px 20px;
-  background:#ffc107;
-  color:#111;
-  border-radius:7px 22px 7px 20px;
-  font-weight:800;
-  transform:rotate(-1deg);
-}
-
-.hero-buttons{
+.buttons{
   display:flex;
-  gap:12px;
   flex-wrap:wrap;
+  gap:13px;
 }
 
 .btn{
@@ -220,93 +186,100 @@ header{
   align-items:center;
   justify-content:center;
   gap:8px;
-  padding:14px 22px;
+  padding:13px 21px;
   border-radius:14px;
-  font-weight:800;
-  transition:.3s;
-}
-
-.btn-primary{
-  background:linear-gradient(145deg,#ffc107,#e65100);
-  box-shadow:0 12px 30px rgba(255,152,0,.22);
-}
-
-.btn-dark{
-  background:#151515;
-  border:1px solid #444;
+  font-weight:700;
+  transition:.25s;
 }
 
 .btn:hover{
-  transform:translateY(-4px);
+  transform:translateY(-3px);
 }
 
-.hero-features{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:35px;
+.btn-primary{
+  background:linear-gradient(135deg,var(--orange),var(--gold));
+  color:white;
+  box-shadow:0 10px 22px rgba(249,115,22,.25);
 }
 
-.feature{
-  padding:11px 15px;
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:14px;
-  backdrop-filter:blur(8px);
-  font-size:13px;
+.btn-light{
+  background:white;
+  color:var(--brown);
+  border:1px solid #f5d6a4;
+  box-shadow:var(--shadow);
 }
 
-/* ================= QUICK CARDS ================= */
-
-.quick{
-  width:min(1180px,92%);
-  margin:-65px auto 0;
+.hero-photo{
   position:relative;
-  z-index:10;
+}
+
+.hero-photo img{
+  width:100%;
+  height:470px;
+  object-fit:cover;
+  border-radius:35px;
+  border:9px solid white;
+  box-shadow:
+    0 25px 45px rgba(93,55,18,.2),
+    10px 12px 0 #fbbf24;
+  transform:rotate(1deg);
+}
+
+.float-card{
+  position:absolute;
+  background:white;
+  padding:15px 18px;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  font-size:13px;
+  font-weight:700;
+}
+
+.float-card.one{
+  left:-25px;
+  bottom:35px;
+}
+
+.float-card.two{
+  right:-20px;
+  top:35px;
+}
+
+/* FEATURES */
+.features{
+  margin-top:-35px;
+  position:relative;
+  z-index:5;
+}
+
+.feature-grid{
   display:grid;
-  grid-template-columns:1.4fr 1fr 1fr;
+  grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
 
-.quick-card{
-  background:linear-gradient(145deg,#191919,#0e0e0e);
-  border:1px solid #292929;
-  border-radius:24px;
-  padding:25px;
-  box-shadow:0 20px 45px rgba(0,0,0,.4);
+.feature{
+  background:white;
+  padding:22px;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  border:1px solid #f9dfb4;
 }
 
-.special{
-  background:linear-gradient(145deg,#8e250f,#35100b);
-  border-color:#a83b1f;
+.feature strong{
+  display:block;
+  color:var(--brown);
+  margin-bottom:3px;
 }
 
-.quick-card h3{
-  margin-bottom:7px;
+.feature span{
+  font-size:13px;
+  color:var(--muted);
 }
 
-.price{
-  color:#ffc107;
-  font-weight:900;
-  font-size:22px;
-}
-
-@media(max-width:850px){
-  .quick{
-    grid-template-columns:1fr;
-    margin-top:-35px;
-  }
-}
-
-/* ================= SECTIONS ================= */
-
+/* SECTIONS */
 section{
-  padding:90px 20px;
-}
-
-.section-inner{
-  max-width:1180px;
-  margin:auto;
+  padding:90px 0;
 }
 
 .section-title{
@@ -315,452 +288,514 @@ section{
 }
 
 .section-title small{
-  color:#ffc107;
+  color:var(--orange);
   font-weight:800;
   text-transform:uppercase;
   letter-spacing:2px;
 }
 
 .section-title h2{
-  font-size:clamp(32px,5vw,52px);
-  line-height:1.1;
+  font-size:38px;
+  color:var(--brown);
   margin:8px 0;
 }
 
 .section-title p{
-  color:#999;
+  color:var(--muted);
 }
 
-/* ================= MENU ================= */
-
+/* MENU */
 .menu-section{
-  background:
-    radial-gradient(circle at 10% 10%,rgba(255,193,7,.07),transparent 30%),
-    #080808;
+  background:linear-gradient(180deg,#fff,#fff8e9);
 }
 
 .menu-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .menu-card{
-  background:linear-gradient(145deg,#181818,#0e0e0e);
-  border:1px solid #272727;
-  border-radius:22px;
-  padding:22px;
+  background:white;
+  border-radius:24px;
+  padding:24px;
+  border:1px solid #f5dfba;
+  box-shadow:var(--shadow);
+  transition:.25s;
   position:relative;
   overflow:hidden;
-  transition:.35s;
+}
+
+.menu-card::after{
+  content:"";
+  position:absolute;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:#fff2cc;
+  right:-25px;
+  top:-25px;
 }
 
 .menu-card:hover{
-  transform:translateY(-8px);
-  border-color:#ffc107;
-  box-shadow:0 20px 45px rgba(255,152,0,.12);
+  transform:translateY(-6px);
+  box-shadow:0 18px 35px rgba(93,55,18,.16);
 }
 
 .menu-icon{
-  width:58px;
-  height:58px;
-  border-radius:18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,193,7,.1);
-  font-size:31px;
-  margin-bottom:15px;
+  font-size:34px;
+  margin-bottom:10px;
 }
 
 .menu-card h3{
-  font-size:18px;
+  color:var(--brown);
+  margin-bottom:4px;
 }
 
 .menu-card p{
-  color:#999;
+  color:var(--muted);
   font-size:13px;
-  margin:5px 0 13px;
 }
 
-.menu-price{
-  color:#ffc107;
-  font-size:18px;
-  font-weight:900;
+.price{
+  margin-top:14px;
+  color:var(--orange);
+  font-size:20px;
+  font-weight:800;
 }
 
-@media(max-width:900px){
-  .menu-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+.available{
+  margin-top:14px;
+  color:#15803d;
+  font-weight:700;
+  font-size:14px;
 }
 
-@media(max-width:480px){
-  .menu-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-/* ================= MENU TABLE ================= */
-
-.full-menu{
-  margin-top:40px;
-  background:#111;
-  border:1px solid #282828;
-  border-radius:25px;
+/* PRICE TABLE */
+.price-box{
+  margin-top:45px;
+  background:white;
+  border-radius:28px;
+  padding:20px;
+  box-shadow:var(--shadow);
   overflow:hidden;
 }
 
-.menu-row{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  padding:17px 22px;
-  border-bottom:1px solid #252525;
+.price-table{
+  width:100%;
+  border-collapse:collapse;
 }
 
-.menu-row:last-child{
-  border-bottom:0;
+.price-table th{
+  background:linear-gradient(135deg,var(--orange),var(--gold));
+  color:white;
+  padding:14px;
+  text-align:left;
 }
 
-.menu-row span:last-child{
-  color:#ffc107;
+.price-table td{
+  padding:13px 14px;
+  border-bottom:1px solid #f3e4cd;
+}
+
+.price-table tr:last-child td{
+  border-bottom:none;
+}
+
+.price-table td:last-child{
+  text-align:right;
   font-weight:800;
-  white-space:nowrap;
+  color:var(--orange);
 }
 
-/* ================= GALLERY ================= */
+/* SPECIAL */
+.special{
+  background:linear-gradient(135deg,#fff0c8,#fffaf0);
+}
 
+.special-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+  background:white;
+  padding:25px;
+  border-radius:32px;
+  box-shadow:var(--shadow);
+}
+
+.special-box img{
+  height:390px;
+  width:100%;
+  object-fit:cover;
+  border-radius:25px;
+}
+
+.special-text h2{
+  color:var(--brown);
+  font-size:40px;
+}
+
+.special-price{
+  color:var(--orange);
+  font-size:30px;
+  font-weight:800;
+  margin:12px 0;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-img{
+  position:relative;
+}
+
+.about-img img{
+  height:420px;
+  width:100%;
+  object-fit:cover;
+  border-radius:30px;
+  box-shadow:var(--shadow);
+}
+
+.about-text h2{
+  color:var(--brown);
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.about-text p{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+/* GALLERY */
 .gallery-section{
-  background:#111;
+  background:#fff8e9;
 }
 
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:14px;
-}
-
-.gallery-item{
-  height:260px;
-  border-radius:22px;
-  overflow:hidden;
-  position:relative;
-  border:1px solid #292929;
-  background:#1a1a1a;
-}
-
-.gallery-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.5s;
-}
-
-.gallery-item:hover img{
-  transform:scale(1.08);
-}
-
-.gallery-item::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(transparent 50%,rgba(0,0,0,.75));
-}
-
-.gallery-label{
-  position:absolute;
-  bottom:14px;
-  left:15px;
-  z-index:2;
-  font-weight:700;
-}
-
-@media(max-width:900px){
-  .gallery{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:500px){
-  .gallery{
-    grid-template-columns:1fr;
-  }
-}
-
-/* ================= VIDEO / ABOUT ================= */
-
-.video-about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-
-.video-card,
-.about-card{
-  background:linear-gradient(145deg,#181818,#0d0d0d);
-  border:1px solid #292929;
-  border-radius:26px;
-  padding:25px;
-}
-
-.video-thumb{
-  margin-top:20px;
-  height:300px;
-  border-radius:20px;
-  overflow:hidden;
-  position:relative;
-  background:url("images/video.jpg") center/cover;
-}
-
-.play{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.play span{
-  width:75px;
-  height:75px;
-  border-radius:50%;
-  background:#ff0000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-}
-
-.about-card p{
-  color:#bbb;
-  margin:18px 0;
-}
-
-.success{
-  color:#ffc107;
-  font-weight:800;
-  font-size:18px;
-}
-
-@media(max-width:800px){
-  .video-about{
-    grid-template-columns:1fr;
-  }
-}
-
-/* ================= INFO ================= */
-
-.info-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
 
-.info-card{
-  background:#121212;
-  border:1px solid #292929;
+.gallery img{
+  width:100%;
+  height:270px;
+  object-fit:cover;
   border-radius:22px;
-  padding:28px;
+  box-shadow:var(--shadow);
+  border:5px solid white;
+  transition:.3s;
 }
 
-.info-icon{
-  font-size:34px;
-  margin-bottom:10px;
+.gallery img:hover{
+  transform:scale(1.03) rotate(.5deg);
 }
 
-.info-card h3{
-  color:#ffc107;
-  margin-bottom:8px;
-}
-
-.info-card p{
-  color:#aaa;
-}
-
-@media(max-width:750px){
-  .info-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-/* ================= LOCATION ================= */
-
-.location-section{
-  background:
-    radial-gradient(circle at 80% 20%,rgba(255,193,7,.08),transparent 30%),
-    #0b0b0b;
-}
-
-.location-grid{
+/* WHY */
+.why-grid{
   display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:22px;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.why-card{
+  background:white;
+  padding:28px;
+  border-radius:25px;
+  box-shadow:var(--shadow);
+  border:1px solid #f4dfbd;
+}
+
+.why-card .emoji{
+  font-size:35px;
+  margin-bottom:12px;
+}
+
+.why-card h3{
+  color:var(--brown);
+  margin-bottom:7px;
+}
+
+.why-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* LOCATION */
+.location{
+  background:linear-gradient(135deg,#fff3d6,#fff);
 }
 
 .map-box{
-  min-height:400px;
-  border-radius:25px;
+  background:white;
+  border-radius:30px;
   overflow:hidden;
-  border:1px solid #292929;
+  box-shadow:var(--shadow);
 }
 
 .map-box iframe{
   width:100%;
-  height:100%;
-  min-height:400px;
+  height:430px;
   border:0;
 }
 
-.location-card{
-  background:linear-gradient(145deg,#191919,#0d0d0d);
-  border:1px solid #292929;
-  border-radius:25px;
-  padding:32px;
+/* CONTACT */
+.contact-box{
+  text-align:center;
+  background:linear-gradient(135deg,var(--orange),var(--gold));
+  color:white;
+  padding:55px 25px;
+  border-radius:35px;
+  box-shadow:0 20px 40px rgba(249,115,22,.25);
 }
 
-.location-card h2{
-  font-size:35px;
-  margin-bottom:15px;
+.contact-box h2{
+  font-size:40px;
+  margin-bottom:10px;
 }
 
-.location-card p{
-  color:#aaa;
+.contact-box p{
   margin-bottom:25px;
 }
 
-.contact-large{
-  font-size:26px;
-  color:#ffc107;
-  font-weight:900;
-  margin-bottom:20px;
-}
-
-.contact-actions{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-@media(max-width:800px){
-  .location-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-  background:#050505;
-  border-top:1px solid #242424;
-  padding:40px 20px 25px;
-  text-align:center;
-}
-
-.footer-brand{
-  font-size:28px;
-  font-weight:900;
-}
-
-.footer-brand span{
-  color:#ffc107;
-}
-
-.footer-tag{
-  color:#888;
-  margin:8px 0 25px;
-}
-
-.social{
+.contact-buttons{
   display:flex;
   justify-content:center;
-  gap:10px;
   flex-wrap:wrap;
-  margin-bottom:25px;
+  gap:13px;
 }
 
-.social a{
-  padding:10px 15px;
-  border-radius:12px;
-  background:#151515;
-  border:1px solid #292929;
+.contact-buttons a{
+  background:white;
+  color:var(--brown);
+  padding:13px 20px;
+  border-radius:14px;
+  font-weight:800;
+}
+
+/* FOOTER */
+footer{
+  background:#fff3d6;
+  padding:40px 0 25px;
+  border-top:1px solid #f1d7a8;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:30px;
+}
+
+footer h3{
+  color:var(--brown);
+  margin-bottom:10px;
+}
+
+footer p,
+footer a{
+  color:var(--muted);
+  font-size:14px;
+}
+
+footer a:hover{
+  color:var(--orange);
+}
+
+.copyright{
+  text-align:center;
+  border-top:1px solid #ead5b4;
+  margin-top:30px;
+  padding-top:20px;
+  color:var(--muted);
   font-size:13px;
 }
 
-.copy{
-  color:#666;
-  font-size:12px;
-}
-
-/* ================= FLOAT BUTTONS ================= */
-
-.float-buttons{
+/* FLOAT BUTTONS */
+.floating{
   position:fixed;
   right:18px;
   bottom:18px;
   z-index:999;
   display:flex;
   flex-direction:column;
-  gap:9px;
+  gap:10px;
 }
 
-.float-buttons a{
-  width:55px;
-  height:55px;
+.float-btn{
+  width:52px;
+  height:52px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:23px;
-  box-shadow:0 8px 25px rgba(0,0,0,.45);
+  color:white;
+  font-size:22px;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
 }
 
-.float-call{
-  background:#d62828;
+.call{
+  background:#ea580c;
 }
 
-.float-wa{
-  background:#20b858;
+.whatsapp{
+  background:#16a34a;
 }
 
-/* ================= CLOCK ================= */
+/* MOBILE */
+@media(max-width:900px){
 
-.clock{
-  position:absolute;
-  top:90px;
-  right:25px;
-  background:rgba(0,0,0,.55);
-  border:1px solid rgba(255,255,255,.1);
-  padding:10px 15px;
-  border-radius:15px;
-  text-align:right;
-  backdrop-filter:blur(10px);
-}
-
-.clock small{
-  color:#ffc107;
-}
-
-.clock strong{
-  display:block;
-  font-size:15px;
-}
-
-@media(max-width:600px){
-  .clock{
+  .nav-links{
     display:none;
   }
 
   .hero{
-    min-height:700px;
+    padding-top:110px;
+  }
+
+  .hero-grid,
+  .special-box,
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-photo{
+    margin-top:15px;
+  }
+
+  .hero-photo img{
+    height:360px;
+  }
+
+  .feature-grid,
+  .menu-grid,
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .container{
+    width:90%;
+  }
+
+  .nav-inner{
+    height:65px;
+  }
+
+  .logo{
+    font-size:16px;
+  }
+
+  .nav-btn{
+    padding:8px 13px;
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:100px 0 65px;
   }
 
   .hero h1{
-    letter-spacing:-2px;
+    font-size:43px;
   }
 
-  .hero-sub{
-    font-size:16px;
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-photo img{
+    height:300px;
+    border-width:6px;
+    box-shadow:0 18px 30px rgba(93,55,18,.18),6px 8px 0 #fbbf24;
+  }
+
+  .float-card{
+    padding:10px 12px;
+    font-size:11px;
+  }
+
+  .float-card.one{
+    left:-5px;
+  }
+
+  .float-card.two{
+    right:-5px;
+  }
+
+  .features{
+    margin-top:-20px;
+  }
+
+  .feature-grid,
+  .menu-grid,
+  .why-grid,
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .section-title h2,
+  .about-text h2{
+    font-size:30px;
+  }
+
+  .special-text h2{
+    font-size:30px;
+  }
+
+  .special-box img{
+    height:280px;
+  }
+
+  .about-img img{
+    height:300px;
+  }
+
+  .gallery img{
+    height:260px;
+  }
+
+  .price-box{
+    padding:8px;
+    overflow-x:auto;
+  }
+
+  .price-table{
+    min-width:500px;
+    font-size:13px;
+  }
+
+  .map-box iframe{
+    height:330px;
+  }
+
+  .contact-box h2{
+    font-size:30px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -768,651 +803,552 @@ footer{
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="nav">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">Newroad <span>Khaja Ghar</span></a>
 
-    <a href="#home" class="brand">
-      <div class="brand-icon">👨‍🍳</div>
-      <div class="brand-text">
-        <strong>Newroad</strong>
-        <span>Khaja Ghar</span>
-      </div>
-    </a>
-
-    <nav class="navlinks">
-      <a href="#home">⌂ Home</a>
-      <a href="#menu">🍽️ Menu</a>
-      <a href="#special">⭐ Special</a>
-      <a href="#photos">📷 Photos</a>
-      <a href="#video">▶ Video</a>
-      <a href="#location">📍 Location</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a class="phone-btn" href="tel:9819154455">📞 Call</a>
-      <a class="wa-btn" href="https://wa.me/9779819154455">WhatsApp</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#location">Location</a>
     </div>
 
+    <a href="tel:9819154455" class="nav-btn">📞 Call</a>
   </div>
-</header>
-
+</nav>
 
 <!-- HERO -->
-<main>
-
 <section class="hero" id="home">
+  <div class="container hero-grid">
 
-  <div class="clock">
-    <small>🇳🇵 Nepal Time</small>
-    <strong id="time">00:00:00</strong>
-  </div>
+    <div>
+      <div class="badge">🍽️ स्वादिलो नेपाली खाजा • Bhimad</div>
 
-  <div class="hero-content">
+      <h1>
+        Newroad
+        <span>Khaja Ghar</span>
+      </h1>
 
-    <div class="location-tag">
-      📍 Bhimad, Tanahun, Nepal
+      <p>
+        भिमाद, तनहुँमा स्वादिलो Momo, Chowmein, Khana Set,
+        Khaja Set, Roti, Sukuti र अन्य स्वादिष्ट परिकार।
+      </p>
+
+      <div class="buttons">
+        <a href="#menu" class="btn btn-primary">🍽️ View Menu</a>
+
+        <a href="https://maps.app.goo.gl/cbBT5p86nnh98DXB7?g_st=ic"
+           target="_blank"
+           class="btn btn-light">
+          📍 Get Directions
+        </a>
+      </div>
     </div>
 
-    <h1>
-      Welcome to<br>
-      <span>Newroad Khaja Ghar</span>
-    </h1>
+    <div class="hero-photo">
+      <img src="IMG_0019.jpeg"
+           alt="Newroad Khaja Ghar">
 
-    <p class="hero-sub">
-      नेपाली स्वादका लोकप्रिय खाजा तथा खाना —
-      ताजा खाना, मिठो स्वाद र आफ्नोपनको ठाउँ।
-    </p>
+      <div class="float-card one">
+        ⭐ Fresh & Delicious
+      </div>
 
-    <div class="paint">
-      ❤️ ताजा खाना &nbsp; | &nbsp; मिठो स्वाद &nbsp; | &nbsp; उचित मूल्य
-    </div>
-
-    <div class="hero-buttons">
-      <a class="btn btn-primary" href="#menu">
-        🍽️ View Menu
-      </a>
-
-      <a class="btn btn-dark"
-         href="https://maps.app.goo.gl/cbBT5p86nnh98DXB7?g_st=ic"
-         target="_blank">
-        📍 Get Directions
-      </a>
-    </div>
-
-    <div class="hero-features">
-      <div class="feature">🥟 Momo</div>
-      <div class="feature">🍜 Chowmein</div>
-      <div class="feature">🍛 Khana Set</div>
-      <div class="feature">🍽️ Khaja Set</div>
-      <div class="feature">☕ Tea & Coffee</div>
-      <div class="feature">🥤 Drinks</div>
+      <div class="float-card two">
+        📍 Bhimad, Tanahun
+      </div>
     </div>
 
   </div>
 </section>
 
+<!-- FEATURES -->
+<div class="features">
+  <div class="container feature-grid">
 
-<!-- QUICK INFO -->
-<section id="special" style="padding-top:0;">
+    <div class="feature">
+      <strong>🍗 Today's Special</strong>
+      <span>Chicken Khaja Set — रु. 200</span>
+    </div>
 
-<div class="quick">
+    <div class="feature">
+      <strong>🕐 Opening Hours</strong>
+      <span>7:00 AM – 9:00 PM • Every Day</span>
+    </div>
 
-  <div class="quick-card special">
-    <h3>⭐ Today's Special</h3>
-    <h2>Chicken Khaja Set</h2>
-    <p>चिकेन, भात, तरकारी, अचार र सलादसहितको स्वादिष्ट खाजा सेट।</p>
-    <div class="price">रु. 200</div>
+    <div class="feature">
+      <strong>📞 Contact</strong>
+      <span>9819154455</span>
+    </div>
+
   </div>
-
-  <div class="quick-card">
-    <h3>🕐 Opening Hours</h3>
-    <h2>7:00 AM – 9:00 PM</h2>
-    <p>Everyday • बिहान ७ बजे देखि बेलुका ९ बजे सम्म</p>
-  </div>
-
-  <div class="quick-card">
-    <h3>📞 Call Us</h3>
-    <h2>9819154455</h2>
-    <p>तत्काल जानकारी तथा अर्डरका लागि सम्पर्क गर्नुहोस्।</p>
-  </div>
-
 </div>
-
-</section>
-
 
 <!-- MENU -->
 <section class="menu-section" id="menu">
 
-<div class="section-inner">
+  <div class="container">
 
-  <div class="section-title">
-    <small>🍽️ Fresh Food • Good Taste</small>
-    <h2>Our Menu & Prices</h2>
-    <p>स्वादिलो नेपाली खाजा तथा खानाका परिकारहरू</p>
-  </div>
-
-
-  <div class="menu-grid">
-
-    <div class="menu-card">
-      <div class="menu-icon">🥟</div>
-      <h3>Buff Momo</h3>
-      <p>ताजा र स्वादिलो बफ मःमः</p>
-      <div class="menu-price">रु. 130</div>
+    <div class="section-title">
+      <small>Our Menu</small>
+      <h2>🍽️ स्वादको दुनियाँ</h2>
+      <p>हाम्रो लोकप्रिय परिकारहरू</p>
     </div>
 
-    <div class="menu-card">
-      <div class="menu-icon">🥟</div>
-      <h3>Chicken Momo</h3>
-      <p>मसलेदार चिकेन मःमः</p>
-      <div class="menu-price">रु. 120</div>
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-icon">🥟</div>
+        <h3>Buff Momo</h3>
+        <p>स्वादिलो Buff Momo</p>
+        <div class="price">रु. 130</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🥟</div>
+        <h3>Chicken Momo</h3>
+        <p>Juicy Chicken Momo</p>
+        <div class="price">रु. 120</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🍜</div>
+        <h3>Buff Chowmein</h3>
+        <p>Fresh & tasty Chowmein</p>
+        <div class="price">रु. 140</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🍜</div>
+        <h3>Chicken Chowmein</h3>
+        <p>Chicken loaded Chowmein</p>
+        <div class="price">रु. 130</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🍛</div>
+        <h3>Cambo Set</h3>
+        <p>Delicious combination set</p>
+        <div class="price">रु. 130</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🍳</div>
+        <h3>Anda Tarkari Roti</h3>
+        <p>Egg, curry & fresh roti</p>
+        <div class="price">रु. 100</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🍚</div>
+        <h3>Sada Khana</h3>
+        <p>Simple Nepali meal</p>
+        <div class="price">रु. 150</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🍗</div>
+        <h3>Masu Khana</h3>
+        <p>Traditional Nepali meat meal</p>
+        <div class="price">रु. 250</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🍛</div>
+        <h3>Buff Khaja Set</h3>
+        <p>Popular Nepali Khaja Set</p>
+        <div class="price">रु. 200</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🍗</div>
+        <h3>Chicken Khaja Set</h3>
+        <p>Our special Chicken Khaja Set</p>
+        <div class="price">रु. 200</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">☕</div>
+        <h3>Black Tea</h3>
+        <p>Fresh hot black tea</p>
+        <div class="price">रु. 20</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🫖</div>
+        <h3>Milk Tea</h3>
+        <p>Classic Nepali milk tea</p>
+        <div class="price">रु. 30</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">☕</div>
+        <h3>Black Coffee</h3>
+        <p>Hot black coffee</p>
+        <div class="price">रु. 60</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">☕</div>
+        <h3>Milk Coffee</h3>
+        <p>Fresh milk coffee</p>
+        <div class="price">रु. 80</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🥩</div>
+        <h3>Pork Set</h3>
+        <p>Available at Newroad Khaja Ghar</p>
+        <div class="available">✓ Available</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-icon">🥤</div>
+        <h3>Drinks</h3>
+        <p>Soft drinks, hard drinks, beer & local Rausi</p>
+        <div class="available">✓ Available</div>
+      </div>
+
     </div>
 
-    <div class="menu-card">
-      <div class="menu-icon">🍜</div>
-      <h3>Buff Chowmein</h3>
-      <p>तरकारीसहितको स्वादिलो चाउमिन</p>
-      <div class="menu-price">रु. 140</div>
-    </div>
+    <!-- PRICE TABLE -->
+    <div class="price-box">
 
-    <div class="menu-card">
-      <div class="menu-icon">🍜</div>
-      <h3>Chicken Chowmein</h3>
-      <p>चिकेनसहितको चाउमिन</p>
-      <div class="menu-price">रु. 130</div>
-    </div>
+      <table class="price-table">
 
-    <div class="menu-card">
-      <div class="menu-icon">🍳</div>
-      <h3>Cambo Set</h3>
-      <p>स्वादिलो कम्बो सेट</p>
-      <div class="menu-price">रु. 130</div>
-    </div>
+        <thead>
+          <tr>
+            <th>परिकार / Item</th>
+            <th>मूल्य / Price</th>
+          </tr>
+        </thead>
 
-    <div class="menu-card">
-      <div class="menu-icon">🥚</div>
-      <h3>Anda Tarkari Roti</h3>
-      <p>अण्डा, तरकारी र रोटीसहित</p>
-      <div class="menu-price">रु. 100</div>
-    </div>
+        <tbody>
+          <tr><td>Buff Momo</td><td>रु. 130</td></tr>
+          <tr><td>Chicken Momo</td><td>रु. 120</td></tr>
+          <tr><td>Buff Chowmein</td><td>रु. 140</td></tr>
+          <tr><td>Chicken Chowmein</td><td>रु. 130</td></tr>
+          <tr><td>Cambo Set</td><td>रु. 130</td></tr>
+          <tr><td>Anda Tarkari Roti</td><td>रु. 100</td></tr>
+          <tr><td>Sada Khana</td><td>रु. 150</td></tr>
+          <tr><td>Masu Khana</td><td>रु. 250</td></tr>
+          <tr><td>Buff Khaja Set</td><td>रु. 200</td></tr>
+          <tr><td>Chicken Khaja Set</td><td>रु. 200</td></tr>
+          <tr><td>Black Tea</td><td>रु. 20</td></tr>
+          <tr><td>Milk Tea</td><td>रु. 30</td></tr>
+          <tr><td>Black Coffee</td><td>रु. 60</td></tr>
+          <tr><td>Milk Coffee</td><td>रु. 80</td></tr>
+          <tr><td>Pork Set</td><td>Available</td></tr>
+          <tr><td>Drinks</td><td>Available</td></tr>
+        </tbody>
 
-    <div class="menu-card">
-      <div class="menu-icon">🍛</div>
-      <h3>Sada Khana</h3>
-      <p>नेपाली स्वादको साधारण खाना</p>
-      <div class="menu-price">रु. 150</div>
-    </div>
+      </table>
 
-    <div class="menu-card">
-      <div class="menu-icon">🍗</div>
-      <h3>Masu Khana</h3>
-      <p>मासुसहितको भरपेट खाना</p>
-      <div class="menu-price">रु. 250</div>
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-icon">🍽️</div>
-      <h3>Buff Khaja Set</h3>
-      <p>नेपाली स्वादको बफ खाजा सेट</p>
-      <div class="menu-price">रु. 200</div>
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-icon">🍗</div>
-      <h3>Chicken Khaja Set</h3>
-      <p>चिकेनसहितको स्वादिलो खाजा सेट</p>
-      <div class="menu-price">रु. 200</div>
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-icon">☕</div>
-      <h3>Black Tea</h3>
-      <p>तातो कालो चिया</p>
-      <div class="menu-price">रु. 20</div>
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-icon">🫖</div>
-      <h3>Milk Tea</h3>
-      <p>तातो दूध चिया</p>
-      <div class="menu-price">रु. 30</div>
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-icon">☕</div>
-      <h3>Black Coffee</h3>
-      <p>Fresh black coffee</p>
-      <div class="menu-price">रु. 60</div>
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-icon">☕</div>
-      <h3>Milk Coffee</h3>
-      <p>तातो दूध कफी</p>
-      <div class="menu-price">रु. 80</div>
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-icon">🥩</div>
-      <h3>Pork Set</h3>
-      <p>पोर्क सेट पनि उपलब्ध</p>
-      <div class="menu-price">Available</div>
-    </div>
-
-    <div class="menu-card">
-      <div class="menu-icon">🥤</div>
-      <h3>Drinks</h3>
-      <p>Soft drinks, hard drinks, beer & local Rausi</p>
-      <div class="menu-price">Available</div>
-    </div>
-
-  </div>
-
-
-  <div class="full-menu">
-
-    <div class="menu-row">
-      <span>🥟 Buff Momo</span>
-      <span>रु. 130</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🥟 Chicken Momo</span>
-      <span>रु. 120</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🍜 Buff Chowmein</span>
-      <span>रु. 140</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🍜 Chicken Chowmein</span>
-      <span>रु. 130</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🍳 Cambo Set</span>
-      <span>रु. 130</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🥚 Anda Tarkari Roti</span>
-      <span>रु. 100</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🍛 Sada Khana</span>
-      <span>रु. 150</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🍗 Masu Khana</span>
-      <span>रु. 250</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🍽️ Buff Khaja Set</span>
-      <span>रु. 200</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🍗 Chicken Khaja Set</span>
-      <span>रु. 200</span>
-    </div>
-
-    <div class="menu-row">
-      <span>☕ Black Tea</span>
-      <span>रु. 20</span>
-    </div>
-
-    <div class="menu-row">
-      <span>🫖 Milk Tea</span>
-      <span>रु. 30</span>
-    </div>
-
-    <div class="menu-row">
-      <span>☕ Black Coffee</span>
-      <span>रु. 60</span>
-    </div>
-
-    <div class="menu-row">
-      <span>☕ Milk Coffee</span>
-      <span>रु. 80</span>
     </div>
 
   </div>
-
-</div>
 </section>
 
+<!-- SPECIAL -->
+<section class="special">
 
-<!-- GALLERY -->
-<section class="gallery-section" id="photos">
+  <div class="container">
 
-<div class="section-inner">
+    <div class="special-box">
 
-  <div class="section-title">
-    <small>📷 ताजा खाना • रमाइलो पलहरू</small>
-    <h2>Our Food Gallery</h2>
-    <p>हाम्रो खाना र Newroad Khaja Ghar का केही झलकहरू</p>
-  </div>
+      <img src="IMG_5044.jpeg"
+           alt="Chicken Khaja Set">
 
-  <div class="gallery">
+      <div class="special-text">
+        <div class="badge">⭐ Today's Special</div>
 
-    <div class="gallery-item">
-      <img src="images/khaja.jpg" alt="Newroad Khaja Ghar Khaja Set">
-      <div class="gallery-label">🍛 Khaja Set</div>
-    </div>
+        <h2>Chicken Khaja Set</h2>
 
-    <div class="gallery-item">
-      <img src="images/chowmein.jpg" alt="Chowmein">
-      <div class="gallery-label">🍜 Chowmein</div>
-    </div>
+        <p>
+          स्वादिष्ट Chicken Khaja Set —
+          साथीभाइ, परिवार र खाजाको समयका लागि राम्रो रोजाइ।
+        </p>
 
-    <div class="gallery-item">
-      <img src="images/birthday.jpg" alt="Newroad Khaja Ghar">
-      <div class="gallery-label">❤️ Happy Moments</div>
-    </div>
+        <div class="special-price">रु. 200</div>
 
-    <div class="gallery-item">
-      <img src="images/momo.jpg" alt="Momo">
-      <div class="gallery-label">🥟 Momo</div>
-    </div>
+        <a href="tel:9819154455" class="btn btn-primary">
+          📞 Order / Call
+        </a>
+      </div>
 
-    <div class="gallery-item">
-      <img src="images/suzans-momo.jpg" alt="Suzan's Momo">
-      <div class="gallery-label">🥟 Suzan's Momo</div>
     </div>
 
   </div>
-
-</div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
 
-<!-- VIDEO + ABOUT -->
-<section id="video">
+  <div class="container about-grid">
 
-<div class="section-inner">
-
-  <div class="video-about">
-
-    <div class="video-card">
-
-      <small style="color:#ffc107;font-weight:800;">
-        ▶ WATCH OUR VIDEO
-      </small>
-
-      <h2>Newroad Khaja Ghar</h2>
-
-      <p style="color:#999;">
-        हाम्रो खाना, ठाउँ र रमाइलो पलहरू YouTube मा हेर्नुहोस्।
-      </p>
-
-      <a href="https://youtube.com/@suzansth1984"
-         target="_blank"
-         class="video-thumb">
-
-        <div class="play">
-          <span>▶</span>
-        </div>
-
-      </a>
-
-      <a href="https://youtube.com/@suzansth1984"
-         target="_blank"
-         class="btn btn-primary"
-         style="margin-top:15px;">
-        ▶ Watch on YouTube
-      </a>
-
+    <div class="about-img">
+      <img src="IMG_0019.jpeg"
+           alt="Newroad Khaja Ghar Bhimad">
     </div>
 
+    <div class="about-text">
 
-    <div class="about-card">
-
-      <small style="color:#ffc107;font-weight:800;">
-        👨‍🍳 ABOUT US
-      </small>
+      <div class="badge">📍 Bhimad, Tanahun</div>
 
       <h2>Newroad Khaja Ghar</h2>
 
       <p>
-        भिमाद, तनहुँमा रहेको Newroad Khaja Ghar मा
-        नेपाली स्वादका लोकप्रिय खाजा तथा खाना पाइन्छ।
+        भिमाद, तनहुँमा स्वादिलो नेपाली खाना तथा खाजाका
+        लागि तपाईंलाई स्वागत छ।
       </p>
 
       <p>
         Momo, Chowmein, Khana Set, Khaja Set,
-        Tea, Coffee लगायतका परिकारहरू उपलब्ध छन्।
+        Roti, Sukuti लगायत विभिन्न स्वादिष्ट परिकारहरू
+        उपलब्ध छन्।
       </p>
 
-      <p>
-        साथीभाइ, परिवार वा एक्लै — मिठो स्वाद र
-        आफ्नोपनका साथ तपाईंलाई स्वागत छ।
-      </p>
+      <div class="buttons">
+        <a href="https://maps.app.goo.gl/cbBT5p86nnh98DXB7?g_st=ic"
+           target="_blank"
+           class="btn btn-primary">
+          📍 Find Us
+        </a>
 
-      <div class="success">
-        ❤️ Good Food + Happy Customers = Our Success
+        <a href="tel:9819154455" class="btn btn-light">
+          📞 9819154455
+        </a>
       </div>
 
     </div>
 
   </div>
 
-</div>
 </section>
 
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
 
-<!-- INFO -->
+  <div class="container">
+
+    <div class="section-title">
+      <small>Our Gallery</small>
+      <h2>📸 हाम्रो झलक</h2>
+      <p>Newroad Khaja Ghar का वास्तविक फोटोहरू</p>
+    </div>
+
+    <div class="gallery">
+
+      <img src="182468b7-4a9a-4979-98df-a92ef3ad9761.jpeg"
+           alt="Newroad Khaja Ghar photo">
+
+      <img src="451BCF09-2EDF-41F9-B7F8-FFB1E0D24D7D.png"
+           alt="Newroad Khaja Ghar photo">
+
+      <img src="9057305c-bc56-4f85-886d-8e52a193b6be.jpeg"
+           alt="Newroad Khaja Ghar photo">
+
+      <img src="IMG_0019.jpeg"
+           alt="Newroad Khaja Ghar photo">
+
+      <img src="IMG_5044.jpeg"
+           alt="Newroad Khaja Ghar photo">
+
+      <img src="IMG_5094.jpeg"
+           alt="Newroad Khaja Ghar photo">
+
+      <img src="IMG_5095.jpeg"
+           alt="Newroad Khaja Ghar photo">
+
+      <img src="cfdc6f10-a13f-4bbb-8d89-5969e61f04fd.jpeg"
+           alt="Newroad Khaja Ghar photo">
+
+      <img src="f2e55974-42f3-4c6d-99a2-d2f78f49ac43.jpeg"
+           alt="Newroad Khaja Ghar photo">
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
 <section>
 
-<div class="section-inner">
+  <div class="container">
 
-  <div class="section-title">
-    <small>✨ Why Visit Us?</small>
-    <h2>हाम्रो विशेषता</h2>
+    <div class="section-title">
+      <small>Why Visit Us</small>
+      <h2>❤️ किन Newroad Khaja Ghar?</h2>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="emoji">🍽️</div>
+        <h3>स्वादिलो खाना</h3>
+        <p>
+          नेपाली स्वादमा तयार गरिएका विभिन्न
+          खाजा तथा खानाका परिकार।
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="emoji">👨‍👩‍👧‍👦</div>
+        <h3>Family Friendly</h3>
+        <p>
+          परिवार तथा साथीभाइसँग बसेर
+          खानाको आनन्द लिन सकिने ठाउँ।
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="emoji">📍</div>
+        <h3>Easy Location</h3>
+        <p>
+          Bhimad, Tanahun मा सजिलै पुग्न सकिने
+          location।
+        </p>
+      </div>
+
+    </div>
+
   </div>
-
-  <div class="info-grid">
-
-    <div class="info-card">
-      <div class="info-icon">🥗</div>
-      <h3>Fresh & Hygienic</h3>
-      <p>ताजा र सफा सामग्रीबाट खाना तयार गर्ने हाम्रो प्रयास।</p>
-    </div>
-
-    <div class="info-card">
-      <div class="info-icon">🇳🇵</div>
-      <h3>Local Nepali Flavors</h3>
-      <p>नेपाली स्वाद र स्थानीय खानाको आफ्नै स्वाद।</p>
-    </div>
-
-    <div class="info-card">
-      <div class="info-icon">😊</div>
-      <h3>Friendly Service</h3>
-      <p>ग्राहकलाई राम्रो सेवा र आफ्नोपनको वातावरण।</p>
-    </div>
-
-  </div>
-
-</div>
 </section>
 
-
 <!-- LOCATION -->
-<section class="location-section" id="location">
+<section class="location" id="location">
 
-<div class="section-inner">
+  <div class="container">
 
-  <div class="section-title">
-    <small>📍 Find Us</small>
-    <h2>हामीलाई भेट्नुहोस्</h2>
-    <p>Newroad, Bhimad, Tanahun, Nepal</p>
-  </div>
-
-
-  <div class="location-grid">
+    <div class="section-title">
+      <small>Find Us</small>
+      <h2>📍 हाम्रो Location</h2>
+      <p>Newroad Khaja Ghar, Bhimad, Tanahun</p>
+    </div>
 
     <div class="map-box">
 
       <iframe
         src="https://www.google.com/maps?q=Newroad%20Khaja%20Ghar%20Bhimad%20Tanahun&output=embed"
-        loading="lazy">
+        loading="lazy"
+        allowfullscreen>
       </iframe>
 
     </div>
 
+    <div style="text-align:center;margin-top:22px;">
+      <a
+        href="https://maps.app.goo.gl/cbBT5p86nnh98DXB7?g_st=ic"
+        target="_blank"
+        class="btn btn-primary">
+        📍 Open Google Maps
+      </a>
+    </div>
 
-    <div class="location-card">
+  </div>
+</section>
 
-      <h2>📍 Exact Location</h2>
+<!-- CONTACT -->
+<section>
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <h2>आजै आउनुहोस्! 🍽️</h2>
 
       <p>
-        <strong>Newroad Khaja Ghar</strong><br>
-        Newroad, Bhimad<br>
-        Tanahun, Nepal 🇳🇵
+        स्वादिलो खाजा र खानाका लागि
+        Newroad Khaja Ghar, Bhimad
       </p>
 
-      <div class="contact-large">
-        📞 9819154455
-      </div>
+      <div class="contact-buttons">
 
-      <div class="contact-actions">
-
-        <a class="btn btn-primary"
-           href="tel:9819154455">
+        <a href="tel:9819154455">
           📞 Call Now
         </a>
 
-        <a class="btn"
-           style="background:#168a45;"
-           href="https://wa.me/9779819154455"
+        <a href="https://wa.me/9779819154455"
            target="_blank">
           💬 WhatsApp
         </a>
 
-        <a class="btn btn-dark"
-           href="https://maps.app.goo.gl/cbBT5p86nnh98DXB7?g_st=ic"
+        <a href="https://maps.app.goo.gl/cbBT5p86nnh98DXB7?g_st=ic"
            target="_blank">
-          🧭 Get Directions
+          📍 Directions
         </a>
-
-      </div>
-
-      <div style="
-        margin-top:30px;
-        padding:18px;
-        background:#111;
-        border-radius:18px;
-        border:1px solid #292929;
-      ">
-
-        <strong style="color:#ffc107;">
-          🕐 Opening Hours
-        </strong>
-
-        <p style="margin:7px 0 0;">
-          Every Day<br>
-          <strong style="color:white;">
-            7:00 AM – 9:00 PM
-          </strong>
-        </p>
 
       </div>
 
     </div>
 
   </div>
-
-</div>
 </section>
-
-</main>
-
-
-<!-- FLOATING -->
-<div class="float-buttons">
-
-  <a class="float-call" href="tel:9819154455">
-    📞
-  </a>
-
-  <a class="float-wa"
-     href="https://wa.me/9779819154455"
-     target="_blank">
-    💬
-  </a>
-
-</div>
-
 
 <!-- FOOTER -->
 <footer>
 
-  <div class="footer-brand">
-    Newroad <span>Khaja Ghar</span>
-  </div>
+  <div class="container">
 
-  <div class="footer-tag">
-    स्वादको आफ्नै ठाउँ ❤️ | Bhimad, Tanahun
-  </div>
+    <div class="footer-grid">
 
-  <div class="social">
+      <div>
+        <h3>Newroad Khaja Ghar</h3>
+        <p>
+          स्वादिलो नेपाली खाना तथा खाजाका लागि
+          Bhimad, Tanahun मा तपाईंलाई स्वागत छ।
+        </p>
+      </div>
 
-    <a href="https://youtube.com/@suzansth1984"
-       target="_blank">
-      ▶ YouTube
-    </a>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#menu">Menu</a></p>
+        <p><a href="#gallery">Gallery</a></p>
+        <p><a href="#about">About</a></p>
+        <p><a href="#location">Location</a></p>
+      </div>
 
-    <a href="#">
-      ♪ TikTok
-    </a>
+      <div>
+        <h3>Connect</h3>
+        <p>
+          <a href="https://youtube.com/@suzansth1984"
+             target="_blank">
+            ▶️ YouTube
+          </a>
+        </p>
+        <p>📞 9819154455</p>
+        <p>📍 Bhimad, Tanahun</p>
+      </div>
 
-    <a href="#">
-      f Facebook
-    </a>
+    </div>
 
-    <a href="#">
-      ◎ Instagram
-    </a>
+    <div class="copyright">
+      © 2026 Newroad Khaja Ghar • Bhimad, Tanahun
+    </div>
 
-  </div>
-
-  <div class="copy">
-    © 2026 Newroad Khaja Ghar. All rights reserved.
   </div>
 
 </footer>
 
+<!-- FLOATING BUTTONS -->
+<div class="floating">
 
-<script>
+  <a href="tel:9819154455"
+     class="float-btn call"
+     aria-label="Call">
+    📞
+  </a>
 
-/* Nepal Digital Clock */
+  <a href="https://wa.me/9779819154455"
+     target="_blank"
+     class="float-btn whatsapp"
+     aria-label="WhatsApp">
+    💬
+  </a>
 
-function updateClock(){
-
-  const now = new Date();
-
-  const options = {
-    timeZone:"Asia/Kathmandu",
-    hour:"2-digit",
-    minute:"2-digit",
-    second:"2-digit",
-    hour12:false
-  };
-
-  document.getElementById("time").textContent =
-    new Intl.DateTimeFormat("en-GB",options).format(now);
-}
-
-updateClock();
-setInterval(updateClock,1000);
-
-</script>
+</div>
 
 </body>
 </html>
